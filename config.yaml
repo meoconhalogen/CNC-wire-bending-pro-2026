@@ -1,0 +1,31 @@
+# CNC Wire Bending Machine Configuration
+machine:
+  name: "CNC Wire Bending Pro 2026"
+  max_speed: 100  # mm/s
+  acceleration: 50  # mm/s²
+  min_radius: 2.0  # mm
+  max_wire_length: 5000  # mm
+  
+wire:
+  diameter: 2.0  # mm
+  material: "steel"  # steel, aluminum, copper, titanium
+  
+processing:
+  tolerance: 0.1  # mm
+  feed_rate: 50  # mm/min
+  cutting_speed: 200  # rpm
+  
+optimization:
+  enable_path_optimization: true
+  merge_segments: true
+  min_segment_length: 0.5  # mm
+  
+output:
+  format: "fanuc"  # fanuc, siemens, heidenhain, generic
+  decimal_places: 3
+  include_comments: true
+  
+visualization:
+  enable_preview: true
+  show_grid: true
+  grid_size: 10  # mm
